@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr1 = ['Polaris','Aldebaran','Deneb','Vega','Altair','Dubhe','Regulus'];
+    let arr2 = ['Ursa Minor','Tarurus','Cygnus','Lyra','Aquila','Ursa Major','Leo'];
+    let star = prompt("Nhap ten ngoi sao can tim: ");
+    function findStar() {
+        let answers = "";
+        for (i=0;i<arr1.length;i++) {
+            if (star==arr1[i]) {
+                answers = arr2[i];
+                break;
+            } else {
+                answers = "Khong co chom sao phu hop"
+            }
+        }
+        document.write(answers);
+    }
+    findStar();
+</script>
+</body>
+</html>
