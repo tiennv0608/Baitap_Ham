@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number = +prompt("Nhap so can tinh giai thua:");
+    function tinhGiaiThua(){
+        let result =1;
+        if (number<0) {
+            result = "Khong co giai thua cua so am";
+            return result;
+        } else if (number == 0){
+            return result;
+        } else {
+            for (i=1;i<=number;i++) {
+                result *= i;
+            }
+            return result;
+        }
+    }
+    document.write(tinhGiaiThua(number));
+</script>
+</body>
+</html>
