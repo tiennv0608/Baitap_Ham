@@ -5,6 +5,25 @@
     <title>Title</title>
 </head>
 <body>
-
+<script>
+    function minNumber(a,b,c) {
+        let min = a;
+        if (b<min) {
+            min=b;
+            return min;
+        } else {
+            if (c<min) {
+                min = c;
+                return min;
+            } else {
+                return min;
+            }
+        }
+    }
+    let x = +prompt("Nhap so thu nhat: ");
+    let y = +prompt("Nhap so thu hai: ");
+    let z = +prompt("Nhap so thu ba: ");
+    document.write(minNumber(x,y,z));
+</script>
 </body>
 </html>
