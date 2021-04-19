@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function checkLetter(){
+        let arr = [];
+        let N = +prompt("Nhap so luong phan tu cua mang");
+        for (i=0;i<N;i++) {
+            arr[i] = prompt("Nhap ky tu cua mang");
+        }
+        let letter = prompt("Nhap 1 ky tu bat ky");
+        let count = 0;
+        for (i=0;i<arr.length;i++) {
+            if (letter==arr[i]) {
+                count++;
+            }
+        }
+        return count===0?-1:count
+
+    }
+    document.write(checkLetter());
+</script>
+</body>
+</html>
