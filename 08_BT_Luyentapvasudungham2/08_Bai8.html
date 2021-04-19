@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function reverseArray(arr) {
+        let N = +prompt("Nhap so phan tu cua mang")
+        arr = [];
+        for(i=0;i<N;i++) {
+            arr[i] = +prompt("Nhap gia tri")
+        }
+        let index;
+        for (i=0;i<N/2;i++) {
+            index = arr[i];
+            arr[i] = arr[N-1-i];
+            arr[N-1-i]=index;
+        }
+        return (arr);
+    }
+    document.write(reverseArray());
+</script>
+</body>
+</html>
