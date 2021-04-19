@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let banKinh = +prompt("Nhap ban kinh hinh tron:");
+    function tinhChuvi() {
+        let perimeter = Math.PI * 2 * banKinh;
+        return perimeter;
+    }
+    function tinhDienTich(){
+        let area = Math.PI * banKinh * banKinh;
+        return area;
+    }
+    document.write(tinhChuvi() +"<br>");
+    document.write(tinhDienTich());
+</script>
+</body>
+</html>
