@@ -6,9 +6,43 @@
 </head>
 <body>
 <h2>Add New Product</h2>
-<input type="text" placeholder="New Product">
-<input type="button" value="Add">
+<input type="text" id="productName" placeholder="New Product">
+<input type="button" value="Add" onclick="addProduct()">
 <h2>Display All Product</h2>
+<div id="showProduct"></div>
+<div id="edit">
 
+</div>
 </body>
+<script>
+    let arrProduct = ['Sony Xperia','Samsung Galaxy','Nokia 6','Xiaomi Redmi Note 4','Apple Iphone 6S','Xiaomi Mi 5s Plus','Apple iPhone 8 Plus','Fujitsu F-04E','Oppo A71']
+    showProduct();
+    function showProduct(){
+        let str = '<table border="1"><tr><th>Product Name</th><th></th><th>'+arrProduct.length+' products</th></tr>';
+        for (let i =0; i<arrProduct.length;i++){
+            str += '<tr><td>'+arrProduct[i]+'</td><td><input type="button" value="Edit" onclick="editProduct('+i+')"></td><td><input type="button" value="Delete" onclick="deleteProduct('+i+')"></td></tr>'
+        }
+        str +='</table>';
+        document.getElementById('showProduct').innerHTML = str;
+    }
+    function addProduct(){
+        let productName = document.getElementById('productName').value
+        arrProduct.push(productName);
+        showProduct();
+    }
+    function editProduct(inDex) {
+        let str = '';
+        str = '<input type="text" id="editProduct" value="'+arrProduct[inDex]+'"><button onclick="saveProduct('+inDex+')">Save</button>';
+        document.getElementById('edit').innerHTML = str;
+    }
+    function saveProduct(inDex) {
+        arrProduct[inDex] = document.getElementById('editProduct').value;
+        document.getElementById('edit').innerHTML = "";
+        showProduct();
+    }
+    function deleteProduct(inDex){
+        arrProduct.splice(inDex,1);
+        showProduct();
+    }
+</script>
 </html>
